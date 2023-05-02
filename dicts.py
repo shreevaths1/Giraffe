@@ -13,6 +13,8 @@ monthConversions = {
     "Dec": "December"
 }
 
+# Keys can only be strings, numbers, or tuples, but values can be any data type.
+
 print(monthConversions["Nov"])
 print(monthConversions.get("Nov"))
 print(monthConversions.get("Leap", "Not Found!"))
