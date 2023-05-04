@@ -1,15 +1,29 @@
-question_file = open("questions.txt", "r")
-# question_file = open("questions.txt", "r+")
-# question_file = open("questions.txt", "a")
-
-print(question_file.readable())
-# print(question_file.read())
+with open("questions.txt", "r") as File1:
+    fileRead = File1.read()
+    print(File1.readable())
+    print(File1.writable())
+print(fileRead)
 
 print()
-print(question_file.readline())
-# print(question_file.readline())
-# print(question_file.readline())
-for line in question_file.readlines():
-    print(line)
+with open("questions.txt", "r") as File1:
+    print(File1.read(4))
+    print(File1.read(4))
+    print(File1.read(4))
+    print(File1.read(4))
 
-question_file.close()
+print()
+with open("questions.txt", "r") as File1:
+    fileRead = File1.readlines()
+print(fileRead)
+
+print()
+with open("questions.txt", "r") as File1:
+    print(File1.readline(20))
+    print(File1.read(20))  # reads next 20 lines
+
+print()
+with open("questions.txt", "r") as File1:
+    i = 0
+    for line in File1:
+        print("Iteration ", i, ": ", line)
+        i += 1
