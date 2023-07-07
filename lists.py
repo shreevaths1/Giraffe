@@ -6,51 +6,49 @@ print(friends[2])
 print(friends[-1])
 print(friends[-2])
 
-print()
+print("--- --- --- --- --- --- ---")
 # All elements up to but not including index 3
 print(friends[1:3])
+# lists are mutable. changing element at index 1
 friends[1] = "Vaths"
 print(friends)
 
-print()
+
+print('len(friends): ', len(friends))
+
+print('sum([1,2,3,4,5,6,7,8,9,10]): ', sum([1,2,3,4,5,6,7,8,9,10]))
+
+print("--- --- --- --- --- --- ---")
 # List functions
-friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
-lucky_numbers = [42, 4, 8, 15, 16, 23]
+list1 = [1,2.5,0.5,0.5]
 
-print(friends)
-friends.extend(lucky_numbers)
-print(friends)
+print("print append operation : ",list1.append(2))
+print("append 2 to list1 : ",list1)
 
-friends.append("Creed")
-print(friends)
+list1.clear()
 
-friends.insert(1, "Kelly")
-print(friends)
+list2 = list1.copy()
+list2.append(4)
+print("list1 : ",list1)
+print("list2 : ",list2)
 
-friends.remove("Jim")
-print(friends)
+print("count 0.5 in list1 : ",list1.count(0.5))
 
-friends.pop()
-print(friends)
+list1.extend([4])
+print("extend list1 : ",list1)
 
-print(friends.index('Oscar'))
-# print(friends.index("C"))
+print("index of 4 in list1 : ",list1.index(4))
 
-friends.append("Oscar")
-print(friends.count("Oscar"))
+list1.insert(2,'buddy')
+print("after inserting 'buddy' : ",list1)
 
-friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
-friends.sort()
-print(friends)
+print("popping : ",list1.pop())
+print("after popping : ",list1)
 
-friends.clear()
-print(friends)
+list1.remove(4)
+print("remove 4 from list1 : ",list1)
 
-lucky_numbers.sort()
-print(lucky_numbers)
-
-lucky_numbers.reverse()
-print(lucky_numbers)
-
-friends2 = lucky_numbers.copy()
-print(friends2)
+list1 = [1,2.5,0.5,0.5]
+print("before reversing list1 : ",list1)
+list1.reverse()
+print("after reversing list1 : ",list1)

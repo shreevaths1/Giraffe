@@ -1,12 +1,13 @@
+import re
 def freq(string):
     words = []
-    words = string.split()
+    words = re.split(r' |,|\.',string)
     dt = {}
 
     for key in words:
         dt[key] = words.count(key)
 
-    print(dt)
+    print(dt.items())
 
 
 freq("Mary had a little lamb Little lamb, little lamb Mary had a little lamb. \
